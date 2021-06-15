@@ -21,6 +21,10 @@ document.getElementById('btnTinh').addEventListener('click', function() {
         alert('yêu cầu nhập số!!');
         return;
     }
+    if (ipN <= 0) {
+        alert('Yêu cầu nhập lại số n');
+        return;
+    }
     for (i = 1; i <= ipN; i++) {
         total += Math.pow(ipX, i);
     }
@@ -38,6 +42,10 @@ document.getElementById('btnGiaiThua').addEventListener('click', function() {
     }
     if (ipSoGiaiThua !== parseInt(ipSoGiaiThua)) {
         alert('yêu cầu nhập số nguyên!!');
+        return;
+    }
+    if (ipSoGiaiThua < 0) {
+        alert('Số giai thừa phải lớn hơn 0!!')
         return;
     }
     for (i = 1; i <= ipSoGiaiThua; i++) {
